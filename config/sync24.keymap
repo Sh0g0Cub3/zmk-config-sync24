@@ -33,6 +33,15 @@
         };
     };
 
+    macros {
+        at_mark: at_mark {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp AT>;
+            label = "AT_MARK";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -59,10 +68,10 @@
 
         SYMBOL {
             bindings = <
-&kp GRAVE      &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)   &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &trans     &trans  &trans
-&kp LS(TILDE)  &trans        &trans      &trans         &trans         &trans         &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT  &trans  &trans
-&trans         &trans        &trans      &trans         &kp LS(UNDER)  &kp MINUS      &kp LS(PLUS)   &kp EQUAL     &trans        &trans     &trans  &trans
-&trans         &trans        &trans      &trans         &trans         &trans         &trans         &trans        &trans        &trans     &trans  &trans
+&kp GRAVE      &kp LS(EXCL)  &at_mark  &kp LS(POUND)  &kp LS(DLLR)   &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)  &kp LS(STAR)  &trans     &trans  &trans
+&kp LS(TILDE)  &trans        &trans    &trans         &trans         &trans         &kp LEFT       &kp DOWN      &kp UP        &kp RIGHT  &trans  &trans
+&trans         &trans        &trans    &trans         &kp LS(UNDER)  &kp MINUS      &kp LS(PLUS)   &kp EQUAL     &trans        &trans     &trans  &trans
+&trans         &trans        &trans    &trans         &trans         &trans         &trans         &trans        &trans        &trans     &trans  &trans
             >;
         };
 
